@@ -8,4 +8,15 @@ public class CalculatorTest {
 	public void testEmptyString() {
 		assertEquals(0, Calculator.add(""));
 	}
+
+	@Test
+	public void testOneNumber1() {
+		assertEquals(1, Calculator.add("1"));
+	}
+
+	@Test
+	public void testOneNumber2() {
+		assertEquals(2, Calculator.add("2"));
+	}
+
 }
