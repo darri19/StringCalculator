@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # TDD Exercise
 ## Purpose
 Learn to use Test Driven Development to create a program.
@@ -39,3 +40,6 @@ Try not to read ahead – do one task at a time. Work incrementally.
    3. This first line is optional; all existing scenarios (using , or \n) should work as before.
 
 > It is recommended that you practice you TDD skills by redoing this exercise several times or other TDD katas (search for TDD Kata). You can try to do as many steps as you can in a 60 minute period. I recommend that you try the kata again from scratch until you can complete the entire thing within 30 minutes. **In this exercise you need to finish all steps.**
+=======
+# StringCalculator
+>>>>>>> 8deac18d2061a2b7b7a73c6cd26a8799b888ab2e
