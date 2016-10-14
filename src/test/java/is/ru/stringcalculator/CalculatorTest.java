@@ -2,6 +2,7 @@ package is.ru.stringcalculator;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
+import edu.princeton.cs.algs4.StdOut;
 
 public class CalculatorTest {
 	@Test
@@ -42,6 +43,16 @@ public class CalculatorTest {
 	@Test
 	public void testNewLine() {
 		assertEquals(5, Calculator.add("2\n3"));
+	}
+
+	@Test
+	public void testNegatives() {
+		try{
+			Calculator.add("2,-4,3,-5");
+		}
+		catch(Exception e){
+			assertEquals("Negatives not allowed: -4,-5", e.getMessage());
+		}
 	}
 
 }

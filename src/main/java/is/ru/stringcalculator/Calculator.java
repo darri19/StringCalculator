@@ -1,4 +1,5 @@
 package is.ru.stringcalculator;
+import edu.princeton.cs.algs4.Queue;
 
 public class Calculator {
 
@@ -8,8 +9,19 @@ public class Calculator {
 			}else{
 				String [] fields = text.split(",|\n");
 				int sum = 0;
+				String exceptionString = "Negatives not allowed: ";
+				boolean hasNegatives = false;
 				for(int i=0; i<fields.length; i++){
-					sum+=Integer.parseInt(fields[i]);
+					int num = Integer.parseInt(fields[i]);
+					if(num<0){
+						exceptionString+= Integer.toString(num) + ",";
+						hasNegatives = true;
+					}
+					sum+=num;
+				}
+				if(hasNegatives){
+					exceptionString = exceptionString.substring(0, exceptionString.length()-1);
+					throw new IllegalArgumentException(exceptionString);
 				}
 				return sum;
 			}
