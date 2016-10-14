@@ -17,7 +17,9 @@ public class Calculator {
 						exceptionString+= Integer.toString(num) + ",";
 						hasNegatives = true;
 					}
-					sum+=num;
+					if(num<=1000){
+						sum+=num;
+					}
 				}
 				if(hasNegatives){
 					exceptionString = exceptionString.substring(0, exceptionString.length()-1);

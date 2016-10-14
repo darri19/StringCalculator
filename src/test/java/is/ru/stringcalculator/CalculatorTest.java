@@ -55,4 +55,8 @@ public class CalculatorTest {
 		}
 	}
 
+	@Test
+	public void testOver1000() {
+		assertEquals(5, Calculator.add("5,1001"));
+	}
 }
