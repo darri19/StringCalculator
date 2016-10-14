@@ -59,4 +59,9 @@ public class CalculatorTest {
 	public void testOver1000() {
 		assertEquals(5, Calculator.add("5,1001"));
 	}
+
+	@Test
+	public void testChoosingDelims() {
+		assertEquals(3, Calculator.add("//;\n1;2"));
+	}
 }

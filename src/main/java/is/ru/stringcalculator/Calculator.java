@@ -7,7 +7,13 @@ public class Calculator {
 		if(text == ""){
         return 0;
 			}else{
-				String [] fields = text.split(",|\n");
+				String delims = ",|\n";
+				if(text.startsWith("//")){
+					delims=text.substring(2,3);
+					text = text.substring(4,text.length());
+				}
+
+				String [] fields = text.split(delims);
 				int sum = 0;
 				String exceptionString = "Negatives not allowed: ";
 				boolean hasNegatives = false;
